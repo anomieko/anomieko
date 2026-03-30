@@ -19,4 +19,12 @@
   we define first and then see." — Walter Lippmann, 1922
 ```
 
+<br/>
+
+```
+ "The spectacle is not a collection of images; it is a social
+  relation between people that is mediated by images."
+  — Guy Debord, 1967
+```
+
 </div>
