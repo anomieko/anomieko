@@ -12,4 +12,11 @@
   in democratic society." — Edward Bernays, 1928
 ```
 
+<br/>
+
+```
+ "For the most part we do not first see, and then define,
+  we define first and then see." — Walter Lippmann, 1922
+```
+
 </div>
