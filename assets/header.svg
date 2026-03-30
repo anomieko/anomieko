@@ -25,6 +25,12 @@
       .n { fill: #ffffff; }
       .l { stroke: #ffffff; stroke-width: 0.4; fill: none; }
 
+      @media (prefers-color-scheme: light) {
+        .n { fill: #000000; }
+        .l { stroke: #000000; }
+        .title { fill: #000000; }
+      }
+
       .d0 { animation: pulse 9s ease-in-out infinite; animation-delay: 0s; }
       .d1 { animation: pulse 9s ease-in-out infinite; animation-delay: 0.45s; }
       .d2 { animation: pulse 9s ease-in-out infinite; animation-delay: 0.9s; }
