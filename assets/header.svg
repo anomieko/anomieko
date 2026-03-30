@@ -51,14 +51,7 @@
         animation: textBreath 9s ease-in-out infinite;
       }
     </style>
-    <radialGradient id="bg" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#141b24"/>
-      <stop offset="100%" stop-color="#0d1117"/>
-    </radialGradient>
   </defs>
-
-  <!-- Background -->
-  <rect width="900" height="400" fill="url(#bg)"/>
 
   <!-- ==================== CONNECTIONS ==================== -->
   <!-- Layer 0-1 -->
