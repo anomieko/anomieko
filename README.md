@@ -4,11 +4,7 @@
 
 <img src="./assets/header.svg" alt="ANOMIE" width="800"/>
 
-<br/>
-
-<img src="./assets/divider.svg" alt="" width="400"/>
-
-<br/><br/>
+<br/><br/><br/>
 
 ```
  "The conscious and intelligent manipulation of the organized
