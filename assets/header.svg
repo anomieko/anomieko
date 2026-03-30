@@ -1,0 +1,172 @@
+<svg width="800" height="220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes glitch1 {
+        0%, 85% { transform: translate(0, 0); opacity: 0; }
+        86% { transform: translate(-4px, -2px); opacity: 0.7; }
+        87% { transform: translate(3px, 1px); opacity: 0; }
+        88% { transform: translate(-2px, 3px); opacity: 0.5; }
+        89% { transform: translate(0, 0); opacity: 0; }
+        90% { transform: translate(4px, -1px); opacity: 0.6; }
+        91% { transform: translate(-3px, 2px); opacity: 0; }
+        92%, 100% { transform: translate(0, 0); opacity: 0; }
+      }
+      @keyframes glitch2 {
+        0%, 78% { transform: translate(0, 0); opacity: 0; }
+        79% { transform: translate(3px, 2px); opacity: 0.5; }
+        80% { transform: translate(-4px, -1px); opacity: 0; }
+        81% { transform: translate(2px, -3px); opacity: 0.6; }
+        82% { transform: translate(0, 0); opacity: 0; }
+        83% { transform: translate(-3px, 1px); opacity: 0.4; }
+        84%, 100% { transform: translate(0, 0); opacity: 0; }
+      }
+      @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        90% { opacity: 1; }
+        91% { opacity: 0.7; }
+        92% { opacity: 1; }
+        93% { opacity: 0.85; }
+        94% { opacity: 1; }
+        95% { opacity: 0.6; }
+        96% { opacity: 1; }
+      }
+      @keyframes subtitleReveal {
+        0%, 100% { opacity: 0.45; }
+        91% { opacity: 0.45; }
+        92% { opacity: 0.2; }
+        93% { opacity: 0.5; }
+        94% { opacity: 0.3; }
+        95% { opacity: 0.45; }
+      }
+      @keyframes bar1 {
+        0%, 87%, 91%, 100% { opacity: 0; }
+        88% { opacity: 0.15; transform: translateX(-20px); }
+        89% { opacity: 0.25; transform: translateX(0px); }
+        90% { opacity: 0.1; transform: translateX(10px); }
+      }
+      @keyframes bar2 {
+        0%, 92%, 96%, 100% { opacity: 0; }
+        93% { opacity: 0.2; transform: translateX(15px); }
+        94% { opacity: 0.1; transform: translateX(-10px); }
+        95% { opacity: 0.15; transform: translateX(5px); }
+      }
+      @keyframes bar3 {
+        0%, 82%, 86%, 100% { opacity: 0; }
+        83% { opacity: 0.1; }
+        84% { opacity: 0.2; }
+        85% { opacity: 0.05; }
+      }
+      @keyframes noise1 {
+        0%, 75%, 78%, 100% { opacity: 0; }
+        76% { opacity: 0.15; }
+        77% { opacity: 0.08; }
+      }
+      @keyframes noise2 {
+        0%, 88%, 90%, 100% { opacity: 0; }
+        89% { opacity: 0.12; }
+      }
+      @keyframes cursor {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes lineGlitch {
+        0%, 95%, 100% { opacity: 0; }
+        96% { opacity: 0.06; }
+        97% { opacity: 0.12; }
+        98% { opacity: 0.04; }
+      }
+      .main-text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 88px;
+        font-weight: bold;
+        letter-spacing: 18px;
+        fill: #ffffff;
+        animation: flicker 7s infinite;
+      }
+      .glitch-1 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 88px;
+        font-weight: bold;
+        letter-spacing: 18px;
+        fill: #888888;
+        animation: glitch1 5s infinite;
+      }
+      .glitch-2 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 88px;
+        font-weight: bold;
+        letter-spacing: 18px;
+        fill: #555555;
+        animation: glitch2 4s infinite;
+      }
+      .subtitle {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        letter-spacing: 8px;
+        fill: #666666;
+        animation: subtitleReveal 7s infinite;
+      }
+      .cursor-blink {
+        fill: #666666;
+        animation: cursor 1.2s step-end infinite;
+      }
+    </style>
+    <clipPath id="glitchClip1">
+      <rect x="0" y="55" width="800" height="30"/>
+      <rect x="0" y="100" width="800" height="15"/>
+    </clipPath>
+    <clipPath id="glitchClip2">
+      <rect x="0" y="70" width="800" height="20"/>
+      <rect x="0" y="110" width="800" height="25"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0d1117"/>
+
+  <!-- Scanlines overlay -->
+  <defs>
+    <pattern id="scanlines" width="800" height="4" patternUnits="userSpaceOnUse">
+      <rect width="800" height="1" fill="#ffffff" opacity="0.02"/>
+      <rect y="3" width="800" height="1" fill="#000000" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Glitch copy 1 (clipped) -->
+  <g clip-path="url(#glitchClip1)">
+    <text x="400" y="120" text-anchor="middle" class="glitch-1">ANOMIE</text>
+  </g>
+
+  <!-- Glitch copy 2 (clipped) -->
+  <g clip-path="url(#glitchClip2)">
+    <text x="400" y="120" text-anchor="middle" class="glitch-2">ANOMIE</text>
+  </g>
+
+  <!-- Main text -->
+  <text x="400" y="120" text-anchor="middle" class="main-text">ANOMIE</text>
+
+  <!-- Horizontal glitch bars -->
+  <rect x="80" y="62" width="280" height="2" fill="#444444" style="animation: bar1 6s infinite;"/>
+  <rect x="350" y="98" width="370" height="2" fill="#333333" style="animation: bar2 8s infinite;"/>
+  <rect x="150" y="132" width="500" height="1" fill="#555555" style="animation: bar3 5s infinite;"/>
+
+  <!-- Noise fragments -->
+  <rect x="520" y="75" width="60" height="3" fill="#333333" style="animation: noise1 9s infinite;"/>
+  <rect x="180" y="108" width="45" height="2" fill="#2a2a2a" style="animation: noise2 7s infinite;"/>
+
+  <!-- Thin horizontal line artifacts -->
+  <g style="animation: lineGlitch 11s infinite;">
+    <line x1="0" y1="85" x2="800" y2="85" stroke="#333333" stroke-width="0.5"/>
+    <line x1="0" y1="86" x2="800" y2="86" stroke="#222222" stroke-width="0.5"/>
+  </g>
+
+  <!-- Subtitle with cursor -->
+  <text x="400" y="170" text-anchor="middle" class="subtitle">SYSTEMS OF INFLUENCE</text>
+  <rect x="555" y="158" width="8" height="15" class="cursor-blink"/>
+
+  <!-- Bottom decorative line -->
+  <line x1="250" y1="195" x2="550" y2="195" stroke="#333333" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Full scanlines overlay -->
+  <rect width="100%" height="100%" fill="url(#scanlines)"/>
+</svg>
