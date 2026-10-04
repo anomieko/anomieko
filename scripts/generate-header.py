@@ -93,7 +93,6 @@ for name, foreground, muted, surface in [
            '<title id="title">Define first. Then see.</title>\n'
            '<desc id="description">“For the most part we do not first see, and then define, we define first and then see.” — Walter Lippmann, 1922. The letters unfold into ANOMIE and return to the quote.</desc>\n'
            '<style>'+''.join(CSS)+'</style>\n'
-           f'<text x="49" y="49" fill="{muted}" style="font-size:14px">anomieko / README.md</text>\n'
            f'<rect class="surface" x="49" y="83" width="802" height="190" rx="6" fill="{surface}"/>\n'
            f'<g fill="{foreground}">'+''.join(NODES)+'</g>\n</svg>\n')
     path = ROOT/'assets'/name
